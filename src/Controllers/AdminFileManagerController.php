@@ -2,6 +2,7 @@
 
 namespace Tir\FileManager\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
@@ -22,10 +23,11 @@ class AdminFileManagerController extends CrudController
         $file = $request->file('file');
         $name = $request->input('name');
 
-        $directory =  $file->extension();
+//        $directory =  $file->extension();
 
+        $date = Carbon::now()->format('Y').'/'.Carbon::now()->format('m').'/';
 
-        $path = Storage::disk('public')->put($directory, $file);
+        $path = Storage::disk('public')->put($date, $file);
 
         $item = File::create([
             'name' => $name,
