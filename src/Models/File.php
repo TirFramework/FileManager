@@ -25,8 +25,7 @@ class File extends BaseModel
     protected function setFields(): array
     {
         return [
-            Text::make('name')->rules('required'),
-
+            Text::make('name'),
         ];
     }
 

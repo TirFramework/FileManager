@@ -23,18 +23,20 @@ class AdminFileManagerController extends CrudController
         $file = $request->file('file');
         $name = $request->input('name');
 
-//        $directory =  $file->extension();
-
         $date = Carbon::now()->format('Y').'/'.Carbon::now()->format('m').'/';
 
         $path = Storage::disk('public')->put($date, $file);
 
-        $item = File::create([
-            'name' => $name,
-            'path' => $path,
-            'type' => $file->extension(),
-            'user_id' => $request->input('user_id'),
-        ]);
+        if($path){
+            $item = File::create([
+                'name' => $name,
+                'path' => $path,
+                'type' => $file->extension(),
+                'user_id' => $request->input('user_id'),
+            ]);
+        }
+
+
 
         $message = trans('file::message.file-uploaded', ['item' => trans("message.item.file")]); //translate message
 
