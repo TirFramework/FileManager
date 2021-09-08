@@ -23,7 +23,7 @@ class AdminFileManagerController extends CrudController
         $file = $request->file('file');
         $name = $request->input('name');
 
-        $date = Carbon::now()->format('Y').'/'.Carbon::now()->format('m').'/';
+        $date = Carbon::now()->format('Y').'/'.Carbon::now()->format('m');
 
         $path = Storage::disk('public')->put($date, $file);
 

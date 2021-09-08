@@ -14,7 +14,7 @@ class File extends BaseModel
      *
      * @var array
      */
-    protected array $fillable = ['name','user_id','path','type'];
+    protected $fillable = ['name','user_id','path','type'];
 
 
     protected function setModuleName(): string
