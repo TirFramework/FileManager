@@ -7,7 +7,7 @@ namespace Tir\FileManager\Scaffold\Fields;
  class FileUploader extends BaseField
 {
 
-     protected string $type = 'fileUploader';
+     protected string $type = 'FileUploader';
      protected string $postUrl;
      protected int $maxCount = 1;
 
