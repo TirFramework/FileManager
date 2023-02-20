@@ -12,10 +12,10 @@ namespace Tir\FileManager\Scaffold\Fields;
      protected int $maxCount = 1;
 
 
-     public function get($model = null): array
+     public function get($dataModel = null)
      {
          $this->postUrl = route('admin.file-manager.upload');
-         return parent::get($model);
+         return parent::get($dataModel);
      }
 
      public function maxCount(int $value): BaseField
