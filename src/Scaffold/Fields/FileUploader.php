@@ -10,7 +10,7 @@ namespace Tir\FileManager\Scaffold\Fields;
      protected string $type = 'FileUploader';
      protected string $postUrl;
      protected int $maxCount = 1;
-
+     protected mixed $value = [];
 
      public function get($dataModel = null)
      {
