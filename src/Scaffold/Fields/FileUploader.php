@@ -11,6 +11,7 @@ namespace Tir\FileManager\Scaffold\Fields;
      protected string $postUrl;
      protected int $maxCount = 1;
      protected mixed $value = null;
+     protected string $basePath = '/storage';
 
      public function get($dataModel = null)
      {
