@@ -8,9 +8,6 @@
             "email": "abbasi.tirdad@gmail.com"
         }
     ],
-    "require": {
-        "tir/user": "*"
-    },
 
     "autoload": {
         "psr-4": {
